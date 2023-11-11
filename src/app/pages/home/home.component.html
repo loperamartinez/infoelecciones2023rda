@@ -1,0 +1,57 @@
+<section class="introPage bg-miAmarillo md:mt-16 mt-[134px]"> 
+<div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Grid -->
+    <div class="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+        <div class="lg:col-span-3">
+        <h1 class="block text-5xl font-BebasNeue text-gray-800 sm:text-6xl md:text-7xl lg:text-8xl dark:text-white animate__animated animate__fadeIn animate__slideInLeft">CONOCE A LOS CANDIDATOS</h1>
+
+      </div>
+      <!-- End Col -->
+  
+      <div class="lg:col-span-4 mt-10 lg:mt-0">
+        <img class="w-full rounded-xl  animate__animated animate__fadeIn" src="assets/img/homeCandidatos.png" alt="imagen candidatos random">
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+  </div>
+  <!-- End Hero -->
+</section>
+
+
+<section class="infoDepartamento bg-miGris font-BebasNeue">
+<!-- Card Section -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto animate__animated animate__fadeIn ">
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Card -->
+      <a *ngFor="let corporacion of infoCorporacionService.corporaciones" [routerLink]="['/elecciones', corporacion.nombreMuniDept]" class="group flex flex-col bg-miGris border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-miGris">
+        <div class="p-4 md:p-5">
+          <div class="flex justify-between items-center">
+
+            <div class="flex items-center mx-auto">
+              <img class="h-[3.375rem] w-[3.375rem] rounded-full" src="{{corporacion.urlBandera}}" alt="Bandera de Risaralda">
+              <div class="ml-3">
+                
+              </div>
+            </div>
+            
+            
+          </div>
+          
+          <br>
+        <h3 class="group-hover:text-negro text-[25px] text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200 text-center">
+            {{corporacion.nombreCorporacion}} de {{corporacion.nombreMuniDept}}
+        </h3>
+
+        </div>
+        
+      </a>
+      <!-- End Card -->
+  
+    </div>
+    <!-- End Grid -->
+  </div>
+  <!-- End Card Section -->
+
+</section>

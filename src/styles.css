@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lato:wght@100;300&family=Montserrat:ital,wght@0,100;0,700;0,800;1,600&family=Nunito+Sans:opsz,wght@6..12,200&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Lato:wght@100;300&family=Montserrat:ital,wght@0,100;0,700;0,800;1,600&family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+@import "~animate.css/animate.css";
+
+.active {
+    text-decoration: underline;
+}
+
+.sinEspacio {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 640px) {
+    .mobile-margin-top {
+      margin-top: 120px; /* Ajusta la cantidad de margen según sea necesario */
+    }
+  }
+
+
+  @media (max-width: 640px) {
+    .mobile-margin-top-home {
+      margin-top: 160px; /* Ajusta la cantidad de margen según tus necesidades */
+    }
+  }
+
+  
+.hometopup {
+  margin-top: 80px; /* Ajusta el valor según tus necesidades */
+}  
+
+.mobile-left-margin {
+  margin-left: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+.mobile-right-margin {
+  margin-right: 20px; /* Ajusta el valor según tus necesidades */
+}

@@ -1,0 +1,30 @@
+<section class="bg-miGris">
+<div class="mt-[120px] max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 sm:gap-6"> 
+
+    <!-- Card *ngFor="let elecciones2023 of elecciones2023Service.elecciones2023" -->
+    <a  *ngFor="let candidato of candidatosPorCiudad; let i = index" class="animate__animated animate__fadeInLeft group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800" [routerLink]="['/infocandidatos', candidato.ciudad, i+inicio]">
+      <div class="p-2 md:p-3" >
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+            <img class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[140px] xl:h-[140px] animate__animated animate__fadeIn" src="{{candidato.urlImagenPartido}}" alt="Imagen Partido">
+            <img class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[140px] xl:h-[140px] rounded-full animate__animated animate__fadeIn" src="{{candidato.urlImagenCandidato}}" alt="Image Candidato">
+            
+            <div class="ml-3 sm:ml-4 md:ml-5 lg:ml-6 xl:ml-7">
+              <h2 class="group-hover:text-blue-600 font-Oswald font-bold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px]">
+                {{candidato.candidato}}
+              </h2>
+              <h4 class="group-hover:text-blue-600 font-Oswald text-[12px] sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px]">
+                {{candidato.partido}}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Section -->
+</section>

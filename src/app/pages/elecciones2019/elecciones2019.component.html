@@ -1,0 +1,141 @@
+<section class="gobernacionRisaralda bg-miGris sinEspacio ">
+
+  <p class="mt-[150px] text-[40px]  text-gray-500 text-center font-Oswald">
+    GOBERNACIÓN DE RISARALDA 2019
+  </p>
+
+  <p class="text-[25px] mt-3 text-gray-500 text-center font-Oswald">
+    Fuente: Registraduría Nacional del Estado Civil
+  </p>
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Card -->
+    <div *ngFor="let elecciones2019rda of infoElecciones2019Service.elecciones2019rda" class="mx-auto my-4 animate__animated animate__fadeIn group flex flex-col w-[290px] h-full bg-white border border-negro shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div class="h-80 flex flex-col justify-center items-center bg-amber-500 rounded-t-xl">
+        <br><img src="{{elecciones2019rda.urlImagenPartido}}" alt="" class="w-auto h-auto" width="56" height="56" viewBox="0 0 56 56" fill="none" >
+        <img src="{{elecciones2019rda.urlImagenCandidato}}" alt="" class="w-[190px] h-[190px]" viewBox="0 0 56 56" fill="none"> 
+        
+        <p class="text-[40px] mt-3 text-gray-500 text-center font-Oswald">
+          {{elecciones2019rda.porcentaje}}
+        </p>
+      </div>
+      
+      <div class="p-4 md:p-6">
+
+        <span class="font-Oswald text-[15px] block mb-1  uppercase text-amber-500">
+          {{elecciones2019rda.partido}}
+        </span>
+        <h3 class="font-Oswald text-[25px] font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+          {{elecciones2019rda.candidato}}
+        </h3>
+        <p class="font-Oswald font-bold text-[20px] mt-3 text-gray-500">
+          {{elecciones2019rda.votos}} VOTOS
+        </p>
+      </div>
+      
+    </div>
+    <!-- End Card -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Blog -->
+
+</section>
+
+
+<section class="alcaldiaPereira bg-miGris sinEspacio">
+
+  <p class="text-[40px] mt-3 text-gray-500 text-center font-Oswald">
+    <br> ALCALDÍA DE PEREIRA 2019
+  </p>
+
+  <p class="text-[25px] mt-3 text-gray-500 text-center font-Oswald">
+    Fuente: Registraduría Nacional del Estado Civil
+  </p>
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Card -->
+    <div *ngFor="let elecciones2019pei of infoElecciones2019Service.elecciones2019pei" class="mx-auto my-4 animate__animated animate__fadeIn group flex flex-col w-[290px] h-full bg-white border border-negro shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div class="h-80 flex flex-col justify-center items-center bg-amber-500 rounded-t-xl">
+        <br><img src="{{elecciones2019pei.urlImagenPartido}}" alt="" class="w-auto h-auto" width="56" height="56" viewBox="0 0 56 56" fill="none" >
+        <img src="{{elecciones2019pei.urlImagenCandidato}}" alt="" class="w-[190px] h-[190px]" viewBox="0 0 56 56" fill="none"> 
+        
+        <p class="text-[40px] mt-3 text-gray-500 text-center font-Oswald">
+          {{elecciones2019pei.porcentaje}}
+        </p>
+      </div>
+      
+      <div class="p-4 md:p-6">
+
+        <span class="font-Oswald text-[15px] block mb-1  uppercase text-amber-500">
+          {{elecciones2019pei.partido}}
+        </span>
+        <h3 class="font-Oswald text-[25px] font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+          {{elecciones2019pei.candidato}}
+        </h3>
+        <p class="font-Oswald font-bold text-[20px] mt-3 text-gray-500">
+          {{elecciones2019pei.votos}} VOTOS
+        </p>
+      </div>
+      
+    </div>
+    <!-- End Card -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Blog -->
+
+</section>
+
+<section class="alcaldiaDosquebradas bg-miGris sinEspacio">
+
+  <p class="text-[40px] mt-3 text-gray-500 text-center font-Oswald">
+    <br> ALCALDÍA DE DOSQUEBRADAS 2019
+  </p>
+
+  <p class="text-[25px] mt-3 text-gray-500 text-center font-Oswald">
+    Fuente: Registraduría Nacional del Estado Civil
+  </p>
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Card -->
+    <div *ngFor="let elecciones2019 of infoElecciones2019Service.elecciones2019" class=" mx-auto my-4 animate__animated animate__fadeIn group flex flex-col w-[290px] h-full bg-white border border-negro shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div class="h-80 flex flex-col justify-center items-center bg-amber-500 rounded-t-xl">
+        <img src="{{elecciones2019.urlImagenPartido}}" alt="" class="w-auto h-auto" width="56" height="56" viewBox="0 0 56 56" fill="none" >
+        <img src="{{elecciones2019.urlImagenCandidato}}" alt="" class="w-[190px] h-[190px]" viewBox="0 0 56 56" fill="none"> 
+        
+        <p class="text-[40px] mt-3 text-gray-500 text-center font-Oswald">
+          {{elecciones2019.porcentaje}}
+        </p>
+      </div>
+      
+      <div class="p-4 md:p-6">
+
+        <span class="font-Oswald text-[15px] block mb-1  uppercase text-amber-500">
+          {{elecciones2019.partido}}
+        </span>
+        <h3 class="font-Oswald text-[25px] font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+          {{elecciones2019.candidato}}
+        </h3>
+        <p class="font-Oswald font-bold text-[20px] mt-3 text-gray-500">
+          {{elecciones2019.votos}} VOTOS
+        </p>
+      </div>
+      
+    </div>
+    <!-- End Card -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Blog -->
+
+</section>

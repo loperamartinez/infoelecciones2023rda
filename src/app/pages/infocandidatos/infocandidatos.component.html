@@ -1,0 +1,76 @@
+<section *ngIf="candidato" class="bg-miGris animate__animated animate__fadeIn mt-10 sm:mt-16 lg:mt-20 xl:mt-24 py-4 sm:py-6 lg:py-8 mobile-left-margin mobile-right-margin">
+  <div class="max-w-screen-xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="col-span-full sm:col-span-1 lg:col-span-2 mobile-margin-top font-Oswald"> <!-- Aplicar la clase personalizada aquí -->
+        <!-- Contenido del componente -->
+
+        <h1 class="text-[40px] sm:text-[50px] lg:text-[60px] font-Oswald font-semibold text-gray-800">{{candidato.candidato}}</h1>
+        <div class="border-t border-gray-300"></div>
+        <p class="mt-3 text-[20px] sm:text-[25px] lg:text-[35px] font-Oswald font-medium">{{candidato.partido}}</p>
+        <!-- Otras secciones -->
+        <div class="mt-6">
+          <span class="text-[15px] sm:text-[15px] lg:text-[25px] font-Oswald">Apoyado (a) por:</span>
+          <div class="mt-4 flex flex-wrap gap-4 ">
+            <img class="w-[1000px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[1000px] xl:h-[90px] " src="{{candidato.urlImagenApoyos}}" alt="Image Description">
+
+          </div>
+        </div>
+        
+        <br>
+        <div class="flex justify-center ">
+          <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-miAmarillo text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
+            <a target="_blank" class="font-normal" href="{{candidato.urlProgramaGobierno}}"> Ver programa de gobierno </a>
+          </button>
+        </div>
+        
+
+
+      </div>
+      <div class="animate__animated animate__fadeInUp">
+        <img class="w-[190px] h-[190px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[390px] xl:h-[390px] mx-auto sm:mx-0 " src="{{candidato.urlImagenCandidato}}" alt="Image Description">
+        <img class="w-[190px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[390px] xl:h-[150px] mx-auto sm:mx-0" src="{{candidato.urlImagenLogo}}" alt="Image Description">
+
+      </div>
+      <!-- Otras secciones -->
+    </div>
+  </div>
+</section>
+
+  <section *ngIf="candidato" class="bg-miGris font-Oswald mobile-left-margin mobile-right-margin">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> Formación académica </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.educacion" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> ¿Intentó inscribirse por firmas? </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.firmas" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> Hechos relevantes </p>
+    <div class="border-t border-gray-300"></div>
+    <p class=" font-Oswald text-[15px] sm:text-[10px] lg:text-[15px]"> Dar clic en cada título para saber más. </p>
+    <span [innerHTML]="candidato.hechosRelevantes" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> Apoyos </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.apoyos" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]">  ¿Ya ha aspirado a una candidatura? </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.candidaturaPasado" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> ¿A quién apoyó en 2019? </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.apoyoPasado" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> Experiencia en lo público </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.experiencia" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+    <br>
+    <p class="font-bold font-Oswald text-[25px] sm:text-[30px] lg:text-[35px]"> Principales propuestas </p>
+    <div class="border-t border-gray-300"></div>
+    <span [innerHTML]="candidato.propuestas" class="font-Oswald text-[15px] sm:text-[15px] lg:text-[20px]">  </span>
+
+    
+</div>
+</section>
